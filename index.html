@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Gacha Rewards</title>
+    <title>Simulador Gacha PXBR</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Simulador de Gacha Rewards</h1>
-        <p>Simule a abertura de uma caixa de recompensas com base em um arquivo de configuração.</p>
+        <h1>Simulador Gacha PXBR</h1>
+        <p>Simule a abertura de uma Caixa do Gacha com base em um arquivo de configuração.</p>
         <div class="upload-section">
-            <input type="file" id="configFile" accept=".txt, .json">
-            <input type="number" id="testCount" min="1" max="1000" placeholder="Quantidade de Testes">
-            <button id="simulateButton">Iniciar Simulação</button>
+            <input type="file" id="configFile" accept=".txt, .json" title="Selecione o arquivo de configuração">
+            <input type="number" id="testCount" min="1" max="1000" placeholder="Quantidade de Testes" title="Defina a quantidade de simulações">
+			<button id="singleRollButton" title="Realizar uma única rolagem na roleta">Rolagem Única</button>
+            <button id="simulateButton" title="Iniciar a simulação com a quantidade definida">Iniciar Simulação</button>
         </div>
         <div id="results" class="results-section">
+		    <div class="roulette-section">
+                <h2>Roleta de Itens</h2>
+                <div id="rouletteContainer">
+                    <div id="roulette"></div>
+                </div>
+                <div id="resultItem"></div>
+            </div>
             <h2>Resultados da Simulação</h2>
             <div id="summary"></div>
             <canvas id="resultsChart"></canvas>
