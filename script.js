@@ -1,21 +1,32 @@
-document.getElementById('simulateButton').addEventListener('click', function() {
-    const fileInput = document.getElementById('configFile');
-    const testCount = document.getElementById('testCount').value;
+const config = {
+    rewards: [
+        { "name": "[✪✪✪✪✪✪] Heatran Cyber Hidden Ability", "chance": 0.000688389169343736 },
+        { "name": "[✪✪✪✪✪] Heatran Cyber + Mensagem de Entrada e Saída", "chance": 0.003441945846718680 },
+        { "name": "[✪✪✪✪✪] Heatran Cyber + Pelúcias Heatran Cyber", "chance": 0.003441945846718680 },
+        { "name": "[✪✪✪✪✪] Toxapex Cyber", "chance": 0.005736576411197800 },
+        { "name": "[✪✪✪✪] Excadrill", "chance": 0.034419458467186800 },
+        { "name": "[✪✪✪✪] Tyranitar", "chance": 0.034419458467186800 },
+        { "name": "[✪✪✪✪] Chansey", "chance": 0.034419458467186800 },
+        { "name": "[✪✪✪✪] Ferrothorn", "chance": 0.034419458467186800 },
+        { "name": "[✪✪✪] Bisharp", "chance": 0.068838916934373600 },
+        { "name": "[✪✪✪] Crobat", "chance": 0.068838916934373600 },
+        { "name": "[✪✪✪] Steelix", "chance": 0.091785222579164800 },
+        { "name": "[✪✪] Chandelure", "chance": 0.091785222579164800 },
+        { "name": "[✪✪] Tentacruel", "chance": 0.091785222579164800 },
+        { "name": "[✪✪] Gengar", "chance": 0.091785222579164800 },
+        { "name": "[✪] Arrokuda", "chance": 0.114731528223956000 },
+        { "name": "[✪] Barbaracle", "chance": 0.114731528223956000 },
+        { "name": "[✪] Marowak", "chance": 0.114731528223956000 }
+    ]
+};
 
-    if (!fileInput.files.length || !testCount) {
-        alert('Por favor, faça upload do arquivo de configuração e defina a quantidade de testes.');
+document.getElementById('simulateButton').addEventListener('click', function () {
+    const testCount = document.getElementById('testCount').value;
+    if (!testCount) {
+        alert('Por favor, defina a quantidade de testes.');
         return;
     }
-
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-
-    reader.onload = function(event) {
-        const config = JSON.parse(event.target.result);
-        simulateGacha(config, testCount);
-    };
-
-    reader.readAsText(file);
+    simulateGacha(config, testCount);
 });
 
 function simulateGacha(config, testCount) {
@@ -50,21 +61,7 @@ function displayResults(results) {
 }
 
 document.getElementById('singleRollButton').addEventListener('click', function () {
-    const fileInput = document.getElementById('configFile');
-    if (!fileInput.files.length) {
-        alert('Por favor, envie o arquivo de configuração.');
-        return;
-    }
-
-    const file = fileInput.files[0];
-    const reader = new FileReader();
-
-    reader.onload = function (event) {
-        const config = JSON.parse(event.target.result);
-        startRoulette(config);
-    };
-
-    reader.readAsText(file);
+    startRoulette(config);
 });
 
 const images = {

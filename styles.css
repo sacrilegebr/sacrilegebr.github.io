@@ -1,33 +1,33 @@
 /* styles.css */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Gradiente de fundo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     margin: 0;
     padding: 20px;
-    color: #ecf0f1; /* Cor do texto principal */
+    color: #ecf0f1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 700px; /* Aumenta um pouco a largura */
+    max-width: 700px;
     margin: auto;
-    background: #34495e; /* Fundo do container mais escuro */
-    padding: 30px; /* Mais padding */
-    border-radius: 15px; /* Bordas mais arredondadas */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
-    border: 1px solid #4a627a; /* Borda sutil */
+    background: #34495e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid #4a627a;
 }
 
 h1 {
     text-align: center;
-    color: #f1c40f; /* Cor vibrante para o título */
+    color: #f1c40f;
     margin-bottom: 25px;
-    font-size: 2.5em; /* Título maior */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra no texto */
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 p {
@@ -40,16 +40,15 @@ p {
 .upload-section {
     margin-bottom: 30px;
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
-    gap: 15px; /* Espaçamento entre os itens */
+    flex-wrap: wrap;
+    gap: 15px;
     justify-content: center;
     align-items: center;
 }
 
-input[type="file"],
 input[type="number"] {
-    flex: 1; /* Permite que os inputs cresçam */
-    min-width: 200px; /* Largura mínima para inputs */
+    flex: 1;
+    min-width: 200px;
     padding: 12px 15px;
     border: 1px solid #5d7a96;
     border-radius: 8px;
@@ -60,21 +59,6 @@ input[type="number"] {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type="file"]::file-selector-button {
-    background-color: #f1c40f;
-    color: #34495e;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="file"]::file-selector-button:hover {
-    background-color: #e6b800;
-}
-
-input[type="file"]:focus,
 input[type="number"]:focus {
     border-color: #f1c40f;
     box-shadow: 0 0 8px rgba(241, 196, 15, 0.5);
@@ -82,7 +66,7 @@ input[type="number"]:focus {
 
 button {
     padding: 12px 25px;
-    background-color: #2ecc71; /* Verde mais vibrante */
+    background-color: #2ecc71;
     color: white;
     border: none;
     border-radius: 8px;
@@ -95,7 +79,7 @@ button {
 
 button:hover {
     background-color: #27ae60;
-    transform: translateY(-2px); /* Efeito de "levantar" */
+    transform: translateY(-2px);
 }
 
 button:active {
@@ -105,10 +89,10 @@ button:active {
 
 .results-section {
     margin-top: 30px;
-    background-color: #2c3e50; /* Fundo para a seção de resultados */
+    background-color: #2c3e50;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra interna */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
@@ -140,53 +124,53 @@ h2 {
     background-color: #2c3e50;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative; /* Para o pseudo-elemento do ponteiro */
+    position: relative;
 }
 
 #rouletteContainer {
     width: 600px;
-    height: 150px; /* Altura fixa para a roleta */
+    height: 150px;
     overflow: hidden;
     margin: 20px auto;
-    border: 3px solid #f1c40f; /* Borda amarela vibrante */
+    border: 3px solid #f1c40f;
     border-radius: 15px;
     position: relative;
-    background-color: #34495e; /* Fundo da roleta */
+    background-color: #34495e;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 #roulette {
     display: flex;
-    align-items: center; /* Centraliza verticalmente os itens */
-    transition: transform 5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Curva de transição mais suave */
-    height: 100%; /* Ocupa a altura total do container */
+    align-items: center;
+    transition: transform 5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    height: 100%;
 }
 
 .roulette-item {
     width: 120px;
     flex-shrink: 0;
     text-align: center;
-    padding: 8px; /* Mais padding */
-    border: 2px solid #5d7a96; /* Borda mais escura */
-    border-radius: 10px; /* Mais arredondado */
-    margin: 0 5px; /* Espaçamento horizontal */
-    background-color: #4a627a; /* Fundo do item */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+    padding: 8px;
+    border: 2px solid #5d7a96;
+    border-radius: 10px;
+    margin: 0 5px;
+    background-color: #4a627a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100% - 16px); /* Ajusta a altura para o padding */
+    height: calc(100% - 16px);
 }
 
 .roulette-item img {
-    width: 80px; /* Imagens um pouco menores */
+    width: 80px;
     height: 80px;
-    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    object-fit: contain;
     margin-bottom: 5px;
-    border-radius: 5px; /* Borda arredondada para a imagem */
-    background-color: #ecf0f1; /* Fundo claro para a imagem */
+    border-radius: 5px;
+    background-color: #ecf0f1;
     padding: 3px;
 }
 
@@ -202,26 +186,26 @@ h2 {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%; /* Centraliza o ponteiro */
-    width: 6px; /* Ponteiro mais grosso */
-    background: #f1c40f; /* Cor vibrante para o ponteiro */
+    left: 50%;
+    width: 6px;
+    background: #f1c40f;
     transform: translateX(-50%);
     z-index: 10;
-    box-shadow: 0 0 15px rgba(231, 76, 60, 0.7); /* Brilho no ponteiro */
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.7);
     border-radius: 3px;
 }
 
 #resultItem {
-    margin-top: 20px; /* Mais espaço */
-    font-size: 2em; /* Texto maior */
+    margin-top: 20px;
+    font-size: 2em;
     text-align: center;
-    color: #2ecc71; /* Cor de sucesso */
+    color: #2ecc71;
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    min-height: 30px; /* Garante espaço mesmo sem texto */
+    min-height: 30px;
 }
 
-/* Estilos para o Chart.js (se for implementado) */
+/* Estilo para o gráfico (Chart.js) */
 #resultsChart {
     background-color: #34495e;
     border-radius: 10px;
@@ -230,7 +214,7 @@ h2 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsividade básica */
+/* Responsividade */
 @media (max-width: 768px) {
     .container {
         margin: 10px;
@@ -242,24 +226,23 @@ h2 {
     }
 
     .upload-section {
-        flex-direction: column; /* Empilha os inputs e botões em telas menores */
+        flex-direction: column;
         align-items: stretch;
     }
 
-    input[type="file"],
     input[type="number"],
     button {
-        width: 100%; /* Ocupa a largura total */
+        width: 100%;
         margin-right: 0;
     }
 
     #rouletteContainer {
-        width: 100%; /* Roleta ocupa a largura total */
-        height: 120px; /* Altura menor para a roleta */
+        width: 100%;
+        height: 120px;
     }
 
     .roulette-item {
-        width: 100px; /* Itens da roleta menores */
+        width: 100px;
         height: calc(100% - 16px);
     }
 
