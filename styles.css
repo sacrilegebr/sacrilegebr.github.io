@@ -204,7 +204,7 @@ h2 {
     bottom: 0;
     left: 50%; /* Centraliza o ponteiro */
     width: 6px; /* Ponteiro mais grosso */
-    background: #e74c3c; /* Cor vibrante para o ponteiro */
+    background: #f1c40f; /* Cor vibrante para o ponteiro */
     transform: translateX(-50%);
     z-index: 10;
     box-shadow: 0 0 15px rgba(231, 76, 60, 0.7); /* Brilho no ponteiro */
